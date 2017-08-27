@@ -2,13 +2,13 @@
 
 const Factory = use('Factory')
 
-class UserSeeder {
+class BrandSeeder {
 
   * run () {
     // run model/database factories here
-    yield Factory.model('App/Model/User').create(5)
+    yield Factory.model('App/Model/Brand').create(5)
   }
 
 }
 
-module.exports = UserSeeder
+module.exports = BrandSeeder

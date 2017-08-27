@@ -19,4 +19,4 @@ const Route = use('Route')
 
 Route.on('/').render('welcome')
 
-Route.get('/users', 'UsersController.index')
+Route.get('/items', 'ItemsController.index')

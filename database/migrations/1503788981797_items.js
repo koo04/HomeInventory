@@ -9,11 +9,11 @@ class ItemsTableSchema extends Schema {
       table.increments()
       table.timestamps()
       table.string('name').unique()
-      table.foreign('type').references('types.id')
-      table.foreign('brand').references('brands.id')
       table.boolean('canned')
       table.integer('amount')
       table.string('image')
+      table.integer('type')
+      table.integer('brand')
     })
   }
 

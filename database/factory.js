@@ -28,3 +28,23 @@ Factory.blueprint('App/Model/User', (fake) => {
     password: fake.password()
   }
 })
+Factory.blueprint('App/Model/Item', (fake) => {
+  return {
+    name: fake.word(),
+    canned: fake.bool(),
+    amount: fake.integer({min: 0, max: 30}),
+    image: fake.avatar({protocol: 'https'}),
+    type: fake.integer({min: 1, max: 4}),
+    brand: fake.integer({min: 1, max: 4})
+  }
+})
+Factory.blueprint('App/Model/Brand', (fake) => {
+  return {
+    name: fake.word()
+  }
+})
+Factory.blueprint('App/Model/Type', (fake) => {
+  return {
+    name: fake.word()
+  }
+})
